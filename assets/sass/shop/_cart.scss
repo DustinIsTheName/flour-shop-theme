@@ -1,0 +1,58 @@
+#cart{
+	@include container(l);
+	position:relative;
+	z-index:30;
+	background:rgba(white,0.75);
+}
+
+.woocommerce-cart-form{
+	@include container-padding(45px, 0px, 45px, 0px);
+}
+
+.cart_totals{
+	text-align:right;
+	h2{
+		@include bold-upper;
+		padding-bottom:0.5em;
+	}
+}
+
+input#coupon_code{
+	margin-right:15px;
+	padding:12px 0 13px 15px;
+	transform:translateY(-2px);
+}
+
+.wc-proceed-to-checkout{
+	display:block;
+}
+
+.checkout-button{
+	@include btn--large;
+}
+.checkout-button:active, .checkout-button:hover {
+	color:white;
+}
+
+// EMPTY cart
+
+.cart-empty{
+	text-align:center;
+	.wc-backward{
+		display:table;
+		margin:0 auto;
+	}
+}
+
+.shop__empty-img{
+	width:50%;
+	max-width:300px;
+	margin:3em auto 2em auto;
+}
+
+.cart-buttons {
+	text-align: right;
+}
+table.shop_table_responsive tr td a.cart_product-title {
+	margin-top: 12px;
+}

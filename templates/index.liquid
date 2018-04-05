@@ -1,0 +1,52 @@
+{% layout 'theme-home' %}
+
+
+{% comment %}
+  Re-use the 'rte' class wherever you output content that was added by a merchant using the Rich Text Editor ( 'rte' stands for rich text editor ).
+  Style all HTML elements in that content the same way across the board.
+  Use the 'rte' class in your CSS to help maintain that consistency.
+  Example: the h2 element should have the same size and color in:
+  - product descriptions
+  - collection descriptions
+  - page content
+  - blog posts
+{% endcomment %}
+
+{% comment %}
+  Very important reading:
+  http://docs.shopify.com/themes/liquid-basics/what-is-true-and-false-in-liquid
+  Learn how to read theme settings in your theme.
+{% endcomment %}
+
+
+
+{% unless settings.homepage_page == blank or pages[settings.homepage_page].empty? %}
+{% assign page = pages[settings.homepage_page] %}
+<div class="rte grid-margins">
+  {{ page.content }}
+</div>
+{% endunless %}
+
+
+<ul class="products">
+{% if collections.all.products.size > 0 %}
+
+{% for product in collections.all.products %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%} 
+
+  <li class="product">
+  <a class="shop-now" href="{{ product.url }}"><img src="{{ product.featured_image | product_img_url: '720x720' }}" alt="{{ product.title | escape  }}" /> </a>  
+  <a class="shop-now" href="{{ product.url }}"><h2 class="woocommerce-loop-product__title">{{ product.title | escape  }}</h2></a>     
+        <span class="price">
+        {% if product.price_varies %}
+          {{ product.price_min | money }} - {{ product.price_max | money }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      </span>                         
+  </li>  
+
+{% endfor %}
+
+{% endif %}
+</ul>

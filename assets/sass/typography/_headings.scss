@@ -1,0 +1,150 @@
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	margin:0;
+	line-height:1;
+}
+
+h1.sliding-header{
+	display:inline-block;
+	position:absolute;
+	@include responsive-font(12vw, 60px, 160px, 80px);
+	font-weight:800;
+	margin:0;
+	letter-spacing: -2.5px;
+
+	// HOME
+	&#sprinkles, &#smiles{
+		bottom:4%;
+		right:0;
+		text-align:right;
+		@media #{$smltablet} {
+			bottom:6%;
+		}
+		@media #{$tablet} {
+			bottom:8%;
+		}
+		@media #{$smldesktop} {
+			bottom:10%;
+		}
+	}
+	&#sprinkles{
+		z-index:10;
+	}
+	&#smiles{
+		z-index:30;
+		margin-bottom:-0.75em;
+	}
+	&#specials{
+		top:0;
+		z-index:20;
+	}
+	&#whats, &#up{
+		top:4%;
+		right:0;
+		text-align:right;
+		@media #{$smltablet} {
+			top:6%;
+		}
+		@media #{$tablet} {
+			top:8%;
+		}
+		@media #{$smldesktop} {
+			top:10%;
+		}
+	}
+	&#whats{
+		z-index:10;
+	}
+	&#up{
+		z-index:30;
+		padding-top:0.6em;
+	}
+
+	// FAQ
+	&#frequent, &#questions{
+		position:static;
+		display:block;
+		line-height:0.75;
+	}
+	&#frequent{
+		margin-left:-20vw;
+	}
+	&#questions{
+		margin-left:0vw;	
+	}
+
+	// ABOUT
+	&#theflourist{
+		position:static;
+	}
+
+	// PRESS
+	&#inthepress{
+		text-align:right;
+		position:static;
+		display:block;
+	}
+
+	// CUSTOM ORDERS
+	&#custom, &#orders{
+		position:static;
+		display:block;
+		text-align:right;
+		line-height:0.75;
+	}
+	&#custom{
+		@media #{$smldesktop} {
+			position:absolute;
+			top:-4%;
+			right:0;
+		}
+	}
+	&#orders{
+		@media #{$smldesktop} {
+			position:absolute;
+			top:11%;
+			right:0;
+			z-index:30;
+		}
+	}
+
+	// LOCATION
+	&#soho{
+		position:static;
+	}
+
+	// SHOP
+	&#treat, &#yourself{
+		bottom:0;
+		left:0;
+	}
+	&#yourself{
+		margin-bottom:-0.55em;
+	}
+}
+
+h3{
+	font-size:24px;
+	font-family:$bloomsbury;
+	@include font-smoothing;
+	@media #{$tablet} {
+		font-size:32px;
+	}
+}
+
+
+h4{
+	font-size:18px;
+	font-family:$bloomsbury;
+	@include font-smoothing;
+	@media #{$tablet} {
+		font-size:24px;
+	}
+}
+
+
+.bold-upper{
+	text-transform:uppercase;
+	font-weight:bold;
+	letter-spacing: 2px;
+}

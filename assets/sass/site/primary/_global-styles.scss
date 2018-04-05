@@ -1,0 +1,54 @@
+body {
+	cursor: url('mitt.png') 24 0, url('mitt.cur') 24 0, auto;
+}
+
+body{
+	@include typekit-loader;
+}
+
+.site-bg{
+	background:$black;
+}
+
+.site-container{
+	background:white;
+	margin:0 6px;
+	position:relative;
+	overflow-x:hidden;
+	&:before, &:after{
+		content:"";
+		display:block;
+		background:$black;
+		position:fixed;
+		z-index:100;
+		left:0;
+		width:100%;
+		height:6px;
+	}
+	&:before{
+		top:0;
+	}
+	&:after{
+		bottom:0;
+	}
+	@media #{$smldesktop} {
+		margin:0 12px;
+		&:before, &:after{
+			height:12px;
+		}
+	}
+}
+
+#rainbow-stripe{
+	display:none;
+	@media #{$smldesktop} {
+		display:block;
+		width:129px;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:2.5%;
+		background:url(rainbow-stripe.svg) repeat-y;
+		z-index:10;
+	}
+}

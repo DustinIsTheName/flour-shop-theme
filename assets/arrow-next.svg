@@ -1,0 +1,14 @@
+<svg width="8px" height="17px" viewBox="0 0 8 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile_Home" transform="translate(-255.000000, -505.000000)" fill="#231F20">
+            <g id="hero-slider" transform="translate(53.000000, 145.000000)">
+                <g id="slider-nav" transform="translate(0.000000, 360.000000)">
+                    <polygon id="Triangle" transform="translate(206.000000, 8.500000) rotate(90.000000) translate(-206.000000, -8.500000) " points="206 5 214 12 198 12"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

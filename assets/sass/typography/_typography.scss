@@ -1,0 +1,22 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+@import "webfonts";
+
+@import "headings";
+
+@import "copy";
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	font-size:16px;
+	line-height: $font__line-height-body;
+	@media #{$tablet} {
+		font-size:18px;
+	}
+}

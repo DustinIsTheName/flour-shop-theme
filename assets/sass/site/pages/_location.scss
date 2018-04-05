@@ -1,0 +1,129 @@
+/*
+
+LOCATION
+
+*/
+
+.location-tempmenu{
+	@include container-padding(0px,0px,120px,0px);
+	img{
+		display:block;
+		margin:0 auto;
+	}
+}
+
+
+
+
+
+
+.location-slider{
+	@include container-padding(0px,0px,120px,0px);
+}
+
+.location-slider__wrapper{
+	@include container(l);
+	@media #{$tablet} {
+		display:flex;
+		flex-flow:row nowrap;
+	}
+}
+
+.location-slider__images{
+	@media #{$tablet} {
+		width:60%;
+	}
+}
+
+.location-slider__text{
+	text-align:center;
+	position:relative;
+	@media #{$tablet} {
+		width:40%;
+	}
+}
+
+.location-slider__icon{
+	width:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	transform:translateY(40%);
+	@media #{$tablet} {
+		width:120px;
+		transform:translateX(-25%) translateY(0);
+	}
+}
+
+.location-menu{
+	@include container-padding(100px,0px,60px,0px);
+	background:url(img/sprinkle_pattern.png) repeat top center, white;
+	background-size:160px 136px;
+	position:relative;
+	z-index:30;
+}
+
+.location-menu__wrapper{
+	width:80%;
+	max-width:960px;
+	margin:0 auto;
+	background:white;
+	text-align:center;
+}
+
+.location-menu__top-icon{
+	width:150px;
+	margin-top:-60px;
+	@media #{$tablet} {
+		width:180px;
+		margin-top:-120px;
+	}
+	@media #{$smldesktop} {
+		width:240px;
+		margin-top:-160px;
+	}
+}
+
+.location-menu__bottom-icon{
+	width:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	transform:translateX(-50%) translateY(50%);
+	@media #{$tablet} {
+		width:150px;
+	}
+}
+
+.location-menu__menu{
+	position:relative;
+	> div{
+		@include container-padding(45px,0px,30px,0px);
+		&:nth-of-type(n+2){
+			position:relative;
+			&:after{
+				content:"";
+				display:block;
+				position:absolute;
+				top:0;
+				left:50%;
+				transform:translateX(-50%);
+				width:240px;
+				height:1px;
+				background:$blue;
+			}
+		}
+		h2{
+			padding-bottom:0.75em;
+		}
+	}
+}
+
+.location-menu__menu-item{
+	display:inline-block;
+	@include container-padding(10px,30px,10px,30px);
+	max-width:300px;
+	strong, span.menu-item-price{
+		display:block;
+	}
+}

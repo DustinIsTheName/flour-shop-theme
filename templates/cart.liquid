@@ -1,0 +1,137 @@
+    <img class="cart-header-icon" src="{{ 'goodybag.svg' | asset_url }}" />
+
+  
+{% if cart.item_count > 0 %}
+<div id="cart">
+<form action="/cart" method="post" class="woocommerce-cart-form">
+
+  <table class="shop_table_responsive">
+    
+    <thead>
+      <tr>
+        <th class="hide-on-small">Item</th>
+        <th>&nbsp;</th>
+        <th class="hide-on-small">Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th class="hide-on-small">&nbsp;</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+
+    {% for item in cart.items %}    
+    
+      {% comment %}
+      Determining the handle of the collection that was last seen for the 'continue shopping' link.
+      {% endcomment %}
+      
+      {% assign collection_url = item.product.collections.last.url %}
+      {% if collection_url == '/collections/frontpage' or collection_url == blank %}
+        {% assign collection_url = '/collections/all' %}
+      {% endif %}
+      
+      {% if forloop.first %}
+        {% assign continue_shopping_url = collection_url %}
+      {% endif %}
+
+      <tr>
+        <td class="hide-on-small product-thumbnail">
+          <a href="{{ collection_url }}{{ item.url }}">
+            <img src="{{ item | img_url: 'compact' }}"  alt="{{ item.title | escape }}" />
+          </a>
+        </td>
+        <td>
+          <span class="delta">
+            <a href="{{ collection_url }}{{ item.url }}" class="cart_product-title">
+           {{ item.product.title }}
+
+
+               
+
+
+            </a>
+          </span>
+          {% comment %}
+          Line Item Properties
+          {% endcomment %}
+          {% assign properties_amount = item.properties | size %}
+          <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_properties" style="display:none !important;"></span>{% if properties_amount > 0 %}
+          <p>
+            {% for p in item.properties %}
+				{%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
+              {% unless p.last == blank %}
+                {{ p.first }}:
+                {% if p.last contains '/uploads/' %}
+                  <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                {% else %}
+                  {{ p.last }}
+                {% endif %}
+                <br />
+              {% endunless %}
+            {% endfor %}
+          </p>
+          {% endif %}
+          <!--<h3 class="epsilon">{{ item.vendor }}</h3>-->
+        </td>
+        <td class="hide-on-small"><span class="product-price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>{{ item.price | money }}</span></td>
+        <td>
+          <input type="number" name="updates[]" id="updates_{{ item.id }}" class="quantity" value="{{ item.quantity }}" />
+        </td>
+        <td><span class="line-total"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" style="display:none !important;"></span>{{ item.line_price | money }}</a></td>
+        <td class="hide-on-small">
+          <a href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
+        </td>
+      </tr>
+    {% endfor %}
+    
+    </tbody>
+    
+  </table>
+  
+  {% comment %}
+  For the checkout and update buttons to work, they need to use
+  a name attribute set to 'checkout' and 'update', respectively. That's case-sensitive.
+  {% endcomment %}
+  
+  <div class="column two-thirds flow-opposite cart-buttons">
+    
+    <input type="submit" name="update" value="Update cart" />
+    
+    
+    <!-- Zapiet | Store Pickup + Delivery -->
+    <div class="zapiet-container"><div id="storePickupApp"></div></div>
+<!-- Zapiet | Store Pickup + Delivery --><input type="submit" name="checkout" value="Check out" />    
+    {% comment %}Paypal and Google checkout buttons{% endcomment %}
+    {% if additional_checkout_buttons %}
+    <p class="additional-checkout-buttons">
+      {{ content_for_additional_checkout_buttons }}
+    </p>
+        <p class="gamma">Subtotal <em><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money }}</em></p>
+
+    {% endif %}
+  </div>
+  
+
+</form>
+</div><!-- END CART -->
+{% else %}
+
+<article id="post-5" class="post-5 page type-page status-publish hentry">
+  <div class="entry-content">
+    <div class="woocommerce">   <div class="cart-empty">
+    <img class="shop__empty-img" src="{{ 'unicorncake.png' | asset_url }}" />
+
+      <p class="bold-upper">How sad!  Your goody bag is empty.</p>
+    
+      <p class="return-to-shop">
+    <a class="btn--large wc-backward" href="/">
+      Back to shop    </a>
+  </p>
+
+</div>
+</div>
+  </div><!-- .entry-content -->
+</article><!-- #post-5 -->
+
+{% endif %}

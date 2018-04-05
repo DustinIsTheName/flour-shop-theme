@@ -1,0 +1,20 @@
+/*
+
+ERROR 404
+
+*/
+
+.error-404{
+	@include container-padding(60px,0px,60px,0px);
+	@include container(m);
+	text-align:center;
+	h1{
+		margin-bottom:0.25em;
+	}
+}
+
+#error-404__icon{
+	width:30%;
+	max-width:240px;
+	margin-bottom:2em;
+}

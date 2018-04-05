@@ -1,0 +1,55 @@
+/*
+
+FAQ
+
+*/
+
+.faq-header{
+	position:relative;
+	z-index:20;
+}
+
+.faq-header__wrapper{
+	@include container(x);
+	position:absolute;
+	top:0;
+	left:50%;
+	transform:translateX(-50%);
+	height:100%;
+}
+
+.faq-header__gif{
+	position:absolute;
+	z-index:20;
+	top:0;
+	right:0;
+}
+
+.faq-content{
+	position:relative;
+	@include container(m);
+	@include container-padding(90px, 0px, 90px, 0px);
+	h3{
+		text-align:center;
+		padding-bottom:1.5em;
+	}
+}
+
+.faq-content__gif{
+	position:absolute;
+	left:0;
+	top:50%;
+	transform:translateX(-200%);
+}
+
+.faq-content__topic{
+	@include container-padding(30px,0px,30px,0px);
+}
+
+.faq-content__questions{
+	@include reset-list;
+	li{
+		margin-bottom:1.5em;
+	}
+}
+

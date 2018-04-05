@@ -1,0 +1,148 @@
+// RECEIPT SCREEN
+.woocommerce-order-received .woocommerce-order {
+	@include container(l);
+	h2 {
+		text-align: center;
+	}
+	table {
+		text-align: center;
+	}
+
+}
+.payment_box.payment_method_square {
+	margin-bottom: 1em;
+}
+
+/**
+ * Checkout
+ */
+
+.checkout-wrapper{
+	@include container(l);
+}
+
+.checkout-header{
+	@include container-padding(60px,0px,0px,0px);
+}
+
+#customer_details__billing, #customer_details__shipping, #order_review{
+	padding:0 0 30px 0;
+}
+
+form.woocommerce-form-login{
+	p.form-row{
+		margin:0 0 0.75em 0;
+	}
+	label{
+		display:block;
+	}
+	abbr[title]{
+		border:none;
+		text-decoration:none;
+	}
+	input{
+		width:100%;
+	}
+	input[type="submit"]{
+		padding:5px 10px;
+		min-width:auto;
+		float:right;
+	}
+}
+
+.checkout-form__wrapper{
+	position:relative;
+	z-index:30;
+	@media #{$tablet} {
+		display:flex;
+		flex-flow:row nowrap;
+		justify-content: space-between;
+	}
+}
+
+#customer_details{
+	@media #{$tablet} {
+		width:calc(100% - 340px);
+	}
+	@media #{$desktop} {
+		width:calc(100% - 380px);
+	}
+}
+
+form.woocommerce-checkout{
+	@include container-padding(45px,0px,60px,0px);
+	h3{
+		margin:0.5em 0 1em 0;
+		text-align:center;
+		text-transform:capitalize;
+	}
+	p.form-row{
+		margin:0 0 0.75em 0;
+	}
+	label{
+		display:block;
+	}
+	abbr[title]{
+		border:none;
+		text-decoration:none;
+	}
+	input[type="text"], textarea, input[type="email"], input[type="tel"], select{
+		appearance:none;
+		width:100%;
+	}
+	@media #{$tablet} {
+		h3{
+			text-align:left;
+		}
+	}
+}
+
+p#ship-to-different-address, p.create-account{
+	@include bold-upper;
+	input{
+		transform:translateY(-2px);
+	}
+	span{
+		padding-left:5px;
+	}
+}
+
+#order_review{
+	padding:30px;
+	background:url(sprinkle_pattern.png) repeat center center, rgba(white,0.8);
+	background-size:110px 94px;
+	@media #{$tablet} {
+		width:300px;
+		align-self:flex-start;
+		h3{
+			text-align:center;
+		}
+	}
+	@media #{$desktop} {
+		width:340px;
+	}
+}
+
+.order_review__wrapper{
+	padding:15px;
+	background:white;
+}
+
+.woocommerce-checkout-review-order-table{
+	text-align:left;
+	th.product-total, td.product-total{
+		text-align:right;
+	}
+	tfoot{
+		th, td{
+			padding:15px 0 0 0;
+		}
+		td{
+			text-align:right;
+		}
+	}
+}
+
+ul.wc_payment_methods{
+	@include reset-list;
+}

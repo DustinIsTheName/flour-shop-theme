@@ -1,0 +1,243 @@
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Column width with margin
+@mixin column-width($numberColumns: 3) {
+	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin container($smlx:smlx){
+  margin:0 auto;
+  @if $smlx == s {
+    width:85%;
+    max-width:480px;
+  }
+  @if $smlx == m {
+    width:90%;
+    max-width:768px;
+  }
+  @if $smlx == l {
+    width:92.5%;
+    max-width:960px;
+  }
+    @if $smlx == product {
+    width:92.5%;
+    max-width:1050px;
+  }
+  @if $smlx == x {
+    width:95%;
+    max-width:1100px;
+  }
+}
+
+// BG COVER
+
+@mixin bg-cover{
+	background-size:cover;
+	background-position:center center;
+}
+
+// CENTERING
+
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+// CONTAINER PADDING
+
+@mixin container-padding($t, $r, $b, $l){
+  padding:calc(#{$t} * 1/2) calc(#{$r} * 1/2) calc(#{$b} * 1/2) calc(#{$l} * 1/2);
+  @media #{$tablet} {
+    padding:calc(#{$t} * 2/3) calc(#{$r} * 2/3) calc(#{$b} * 2/3) calc(#{$l} * 2/3);
+  }
+  @media #{$smldesktop} {
+    padding:#{$t} #{$r} #{$b} #{$l};
+  }
+}
+
+// RESET LIST
+
+@mixin reset-list{
+  margin:0;
+  padding:0;
+  list-style:none;
+  >li{
+    margin:0;
+  }
+}
+
+// UPPERCASE
+
+@mixin text-upper{
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+}
+
+// TYPEKIT LOADER
+
+@mixin typekit-loader{
+  opacity:0;
+  transition:opacity ease-in-out 0.15s;
+  html.wf-active &{
+    opacity:1;
+  }
+}
+
+// FONT SMOOTHING
+
+@mixin font-smoothing{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// LAST PARAGRAPH
+
+@mixin last-para{
+  p:last-of-type{
+    margin-bottom:0px;
+  }
+}
+
+// RESPONSIVE TEXT
+
+@mixin responsive-font($responsive, $min, $max: false, $fallback: false) {
+  $responsive-unitless: $responsive / ($responsive - $responsive + 1);
+  $dimension: if(unit($responsive) == 'vh', 'height', 'width');
+  $min-breakpoint: $min / $responsive-unitless * 100;
+  
+  @media (max-#{$dimension}: #{$min-breakpoint}) {
+    font-size: $min;
+  }
+  
+  @if $max {
+    $max-breakpoint: $max / $responsive-unitless * 100;
+    
+    @media (min-#{$dimension}: #{$max-breakpoint}) {
+      font-size: $max;
+    }
+  }
+  
+  @if $fallback {
+    font-size: $fallback;
+  }
+  
+  font-size: $responsive;
+}
+
+@mixin slick-load-fix{
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  &.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+  }    
+}
+
+// RAINBOW letter-spacing
+
+@mixin rainbow-lettering{
+  span{
+    &:nth-of-type(6n+1){
+      color:$blue;
+    }
+    &:nth-of-type(6n+2){
+      color:$green;
+    }
+    &:nth-of-type(6n+3){
+      color:darken($yellow,1.5%);
+    }
+    &:nth-of-type(6n+4){
+      color:$orange;
+    }
+    &:nth-of-type(6n+5){
+      color:$pink;
+    }
+    &:nth-of-type(6n+6){
+      color:$purple;
+    }
+  }
+}
+
+// BOLD UPPERCASE
+
+@mixin bold-upper{
+  text-transform:uppercase;
+  font-weight:bold;
+  letter-spacing: 1.75px;
+}
+
+// BUTTONS
+
+@mixin btn{
+  background:$black;
+  padding:10px 15px;
+  text-transform:uppercase;
+  color:white;
+  letter-spacing: 1.5px;
+  text-decoration:none;
+  &:hover, &:visited{
+    color:white;
+  }
+}
+
+@mixin btn--large{
+  @include btn;
+  display:inline-block;
+  padding:15px 30px 12px 20px;
+  min-width:180px;
+  position:relative;
+  text-align:left;
+  &:after{
+    content:"\f0da";
+    font-family:FontAwesome;
+    display:block;
+    color:white;
+    position:absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+  }
+}

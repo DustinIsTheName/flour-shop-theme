@@ -1,0 +1,265 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: $color__background-hr;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+@import "lists";
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+// RAINBOW STRIPE
+
+.rainbow-stripe{
+	display:none;
+	@media #{$smldesktop} {
+		display:block;
+		width:129px;
+		height:100%;
+		position:absolute;
+		top:0;
+		right:2.5%;
+		background:url(rainbow-stripe.svg) repeat-y;
+		z-index:20;
+	}
+}
+
+// SLIDERS
+
+.large-slider{
+	@include slick-load-fix;
+	.slider-nav{
+		display: inline-block;
+		padding: 20px;
+		position: relative;
+		.slick-prev, .slick-next{
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			width:8px;
+			height:17px;
+		}
+		.slick-prev{
+			left:0;
+			background:url(arrow-prev.svg);
+		}
+		.slick-next{
+			right:0;
+			background:url(arrow-next.svg);
+		}
+		ul.slick-dots{
+			@include reset-list;
+			li{
+				display:inline-block;
+				padding:18px 4px 0 4px;
+				opacity:0.3;
+				transition:opacity ease-in-out 0.3s;
+				&:nth-of-type(6n+1) button{
+					background:$blue;
+				}
+				&:nth-of-type(6n+2) button{
+					background:$green;
+				}
+				&:nth-of-type(6n+3) button{
+					background:$yellow;
+				}
+				&:nth-of-type(6n+4) button{
+					background:$orange;
+				}
+				&:nth-of-type(6n+5) button{
+					background:$pink;
+				}
+				&:nth-of-type(6n+6) button{
+					background:$purple;
+				}
+				&.slick-active{
+					opacity:1;
+				}
+				button{
+					border:none;
+					color:transparent;
+					min-width:auto;
+					width:30px;
+					height:6px;
+					border-radius:6px;
+					padding:0;
+					&:focus, &:active{
+						outline:none;
+					}
+					&:after{
+						display:none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// BDAY CLUB MODAL
+
+#bday-club-modal{
+	width:95%;
+	max-width:540px;
+	margin:0 auto;
+	text-align:center;
+	border:5px solid $black;
+	background:url(sprinkle_pattern.png) repeat center center, white;
+	background-size:110px 94px;
+	@include container-padding(60px,90px,60px,90px);
+	position:relative;
+	.bday-club__wrapper{
+		position:relative;
+		background:white;
+		@include container-padding(10px,10px,10px,10px);
+		h1{
+			font-family:$bloomsbury;
+			@include responsive-font(4vw, 24px, 54px, 54px);
+			font-weight:300;
+			margin:0.35em 0 0.7em 0;
+			span{
+				display:block;
+				transform:rotate(-10deg);
+				margin-bottom:0.4em;
+			}
+		}
+		p{
+			margin:0 0 5px 0;
+		}
+		&:before, &:after{
+			content:"";
+			display:block;
+			position:absolute;
+			top:50%;
+			background-position:center center;
+			width:40px;
+			height:123px;
+		}
+		&:before{
+			background:url(candles-left.png);
+			background-size:contain;
+			left:0;
+			transform:translateX(-70%) translateY(-25%);
+		}
+		&:after{
+			background:url(candles-right.png) no-repeat;
+			background-size:contain;
+			right:0;
+			transform:translateX(70%) translateY(-60%);
+		}
+	}
+	.mfp-close{
+		transform: translateX(50%) translateY(-50%);
+	}
+	@media #{$tablet} {
+		.bday-club__wrapper{
+			&:before, &:after{
+				width:60px;
+				height:185px;
+			}
+			&:before{
+				transform:translateX(-100%) translateY(-25%);
+			}
+			&:after{
+				transform:translateX(100%) translateY(-60%);
+			}
+		}
+	}
+}
+
+// TPD CUSTOM ANIMATIONS
+
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rollOut {
+  0 {
+    opacity: 1;
+  }
+  80% {
+  	opacity:0;
+  }	
+  100% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+
+.jackInTheBox {
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    animation-name: jackInTheBox;
+    animation-duration: 1s;
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity:1;
+    }
+    &.mfp-bg {
+      opacity: 0.95;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    .mfp-with-anim {
+      animation-name:rollOut;
+      animation-duration:1s;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+  }
+  
+}
+
+@import "tables";

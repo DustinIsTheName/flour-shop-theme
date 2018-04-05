@@ -1,0 +1,58 @@
+.btn{
+	background:$black;
+	padding:10px 15px;
+	text-transform:uppercase;
+	color:white;
+	letter-spacing: 1.5px;
+	text-decoration:none;
+	border-radius:0px;
+	&:hover, &:visited{
+		color:white;
+	}
+}
+
+.btn--large{
+	@extend .btn;
+	display:inline-block;
+	padding:15px 30px 12px 20px;
+	min-width:180px;
+	position:relative;
+	text-align:left;
+	&:after{
+		content:"\f0da";
+		font-family:FontAwesome;
+		display:block;
+		color:white;
+		position:absolute;
+		top:50%;
+		right:15px;
+		transform:translateY(-50%);
+	}
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border:none;
+	@extend .btn;
+	display:inline-block;
+	padding:15px 30px 12px 20px;
+	min-width:180px;
+	position:relative;
+	text-align:left;
+	margin-bottom: 8px;
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+	&:active,
+	&:focus {
+		border:none;
+		outline:none;
+	}
+}
+
+a, button, input, select, span.slick-arrow, button.mfp-close, button.mfp-arrow, .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close,input[type="submit"]{
+	cursor: url('mitt-pointer.png') 24 0, url('mitt-pointer.cur') 24 0, auto;	
+}
+

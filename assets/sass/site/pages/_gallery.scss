@@ -1,0 +1,259 @@
+/*
+
+GALLERY
+
+*/
+
+.gallery-content{
+	@include container-padding(0px,0px,60px,0px);
+	@include container(l);
+	position:relative;
+	z-index:30;
+}
+
+#gallery-tags{
+	@include reset-list;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	@include container-padding(30px,0px,30px,0px);
+	li{
+		padding:1px 6px;
+		@include bold-upper;
+		font-size:12px;
+		&.active a{
+			color:$pink;
+			position:relative;
+			&:before{
+				content:"";
+				display:block;
+				position:absolute;
+				top:0;
+				left:0;
+				width:12px;
+				height:12px;
+				transform:translateX(-70%) translateY(-50%);
+				background:url(img/single-sparkle.svg) no-repeat;
+				background-size:contain;
+			}
+		}
+	}
+	a{
+		text-decoration:none;
+		color:$black;
+	}
+	@media #{$smldesktop} {
+		li{
+			padding:2px 10px;
+			font-size:16px;
+			&.active a{
+				&:before{
+					transform:translateX(-90%) translateY(-75%);
+					width:16px;
+					height:16px;
+				}
+			}
+		}
+	}	
+}
+
+#gallery-images{
+	margin-right:-0.8%;
+	> div{
+		display:none;
+		&.active{
+			display:block;
+			@include clearfix-after;
+		}
+	}
+}
+
+.gallery-images__collection{
+	position:relative;
+	margin-bottom:180px;
+	.loader{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		text-align:center;
+		transform:translateY(100%);
+	}
+	&:after{
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+.gallery-images__loader{
+	position:absolute;
+	top:0;
+	width:100%;
+	background:url(img/cakeslice.gif) no-repeat;
+	background-position:center center;
+	background-size:60px 76px;
+	padding:160px 0 60px 0;
+	text-align:center;
+	.all-loaded &{
+		top:auto;
+		bottom:0;
+		transform:translateY(100%);
+	}
+}
+
+.gallery-images__image{
+	width:32%;
+	margin:1.33% 1.33% 0 0;
+	float:left;
+	opacity:0;
+	.all-loaded &{
+		animation: bounceIn 0.7s forwards;
+		&:nth-of-type(2n){
+			animation-delay:.15s;
+		}
+		&:nth-of-type(3n){
+			animation-delay:.2s;
+		}
+		&:nth-of-type(5n){
+			animation-delay:.3s;
+		}
+	}
+	a{
+		display:block;
+		position:relative;
+		overflow:hidden;
+		background:rgba(white,0.8);
+		&:after{
+			content:"";
+			display:block;
+			padding-top:100%;
+		}
+		img{
+			display:block;
+			margin:0;
+			position:absolute;
+			@include center(xy);
+		}
+	}
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.mfp-zoom-in {
+  
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.2s ease-in-out; 
+    transform: scale(0.8); 
+  }
+  
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s ease-out;
+  }
+  
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: scale(1); 
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+  
+  /* animate out */
+  &.mfp-removing {
+    
+    .mfp-with-anim {
+      transform: scale(0.8); 
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+    
+  }
+  
+}
+
+.fs-gallery{
+	.mfp-image-holder{
+		.mfp-content{
+			@include container(m);
+		}
+	}
+	.mfp-inline-holder{
+		.mfp-content{
+			max-width:500px;
+		}
+	}
+	.mfp-content{
+		button.mfp-close{
+			transform:translateX(25%) translateY(-50%);
+		}
+		button.mfp-arrow{
+			top:50%;
+			transform:scale(0.75) translateY(50%);
+		}
+	}
+	.mfp-img{
+		padding:0;
+	}
+	.mfp-bottom-bar{
+		display:none;
+	}
+	.gallery-images__video{
+		max-width:500px;
+		iframe{
+			margin:0 auto;
+		}
+	}
+	
+	@media #{$smldesktop} {
+		.mfp-content{
+			button.mfp-arrow{
+				&.mfp-arrow-left{
+					transform:scale(1) translateX(-200%) translateY(50%);
+				}
+				&.mfp-arrow-right{
+					transform:scale(1) translateX(200%) translateY(50%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,104 @@
+/*
+
+PRESS
+
+*/
+
+.press-content{
+	@include container-padding(60px,0px,60px,0px);
+	min-height:1000px;
+}
+
+.press-header{
+	position:relative;
+	text-align:center;
+	a{
+		display:table;
+		margin:0 auto;
+		text-decoration:none;
+		color:$black;
+		padding:0.4em 0;
+		position:relative;
+		&.press-kit-link{
+			padding-bottom:0.1em;
+			border-bottom:1px solid $black;
+			span{
+				@include rainbow-lettering;
+			}
+		}
+	}
+}
+
+.press-header__email-icon{
+	position:absolute;
+	top:0;
+	left:0;
+	transform:translateX(-100%) translateY(-50%);
+}
+
+.press-header__wrapper{
+	@include container(x);
+	position:absolute;
+	top:0;
+	left:50%;
+	transform:translateX(-50%);
+	height:100%;
+}
+
+.press-header__top-icon{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.press-content__wrapper{
+	max-width:1600px;
+	margin:0 auto;
+}
+
+.press-content__links{
+	margin:0 auto;
+	position:relative;
+	z-index:30;
+	@include clearfix;
+	margin-bottom:180px;
+}
+
+.press-content__link{
+	float:left;
+	margin-bottom:20px;
+	box-shadow:0 0 5px rgba($black,0.25);
+	width:266px;
+	opacity:0;
+	transition:opacity ease-in-out 0.5s;
+	.all-loaded &{
+		opacity:1;
+	}
+	img{
+		display:block;
+		margin:0;
+	}
+	a{
+		display:block;
+		overflow:hidden;
+		background:rgba(white,0.8);
+	}
+}
+
+.press-content__loader{
+	position:absolute;
+	top:0;
+	width:100%;
+	background:url(img/cakeslice.gif) no-repeat;
+	background-position:center center;
+	background-size:60px 76px;
+	padding:160px 0 60px 0;
+	text-align:center;
+	.all-loaded &{
+		top:auto;
+		bottom:0;
+		transform:translateY(100%);
+	}
+}
+
+

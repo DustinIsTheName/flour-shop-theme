@@ -1,0 +1,234 @@
+@import "buttons";
+
+@import "fields";
+
+
+#gform_wrapper_1{
+	background:url(cake-slice.svg) no-repeat;
+	background-size:contain;
+	background-position:center center;
+	padding:94px 5px 28px 35px;
+	width:310px;
+	margin:0 auto;
+	.gfield{
+		margin:0 0 5px 0;
+		width:100%;
+		padding:0;
+		&.gfield_contains_required{
+			position:relative;
+			&:after{
+				content:"*";
+				display:block;
+				position:absolute;
+				top:0px;
+				right:5px;
+				color:white;
+				font-weight:300;
+			}
+		}
+		&.name{
+			input{
+				background:$blue;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $blue inset !important;
+				}
+			}
+		}
+		&.email{
+			input{
+				background:$green;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $green inset !important;
+				}
+			}
+		}
+		&.occasion{
+			input{
+				background:$yellow;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $yellow inset !important;
+				}
+			}
+		}
+		&.guests, &.price{
+			display:inline-block;
+			width:calc(50% - 3px);
+			background:$orange;
+			input{
+				background:$orange;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $orange inset !important;
+				}
+			}
+		}
+		&.price{
+			transform:translateX(6px);
+		}
+		&.delivery-date, &.cake-type{
+			display:inline-block;
+			width:calc(50% - 3px);
+			background:$pink;
+		}
+		&.delivery-date{
+			transform:translateX(6px);
+			input{
+				background:$pink;
+				width:100%;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $pink inset !important;
+				}
+			}
+		}
+		&.delivery-location{
+			input{
+				background:$purple;
+				&:-webkit-autofill {
+				    -webkit-box-shadow: 0 0 0 1000px $purple inset !important;
+				}
+			}
+		}
+	}
+	label.gfield_label{
+		display:none;
+	}	
+	span.gfield_required{
+		color:white;
+	}
+	.gform_footer{
+		padding:0;
+		margin:0;
+	}
+	.ginput_container{
+		margin:0;
+	}
+	input{
+		border-radius: 0px;
+		border:none;
+		padding:5px 10px 5px 15px;
+		color:$black;
+		text-transform:lowercase;
+		font-weight:600;
+		font-style:italic;
+		&:focus{
+			outline:none;
+		}
+		&::placeholder{
+			color:$black;
+			text-transform:lowercase;
+			font-weight:600;
+			font-style:italic;
+		}
+	}
+	select{
+		appearance:none;
+		border:none;
+		background:transparent;
+		padding:9px 0px 9px 14px;
+		color:$black;
+		text-transform:lowercase;
+		font-weight:600;
+		font-style:italic;
+		&:focus{
+			outline:none;
+		}
+	}
+	&.gform_validation_error {
+		position:relative;
+		div.validation_error{
+			position:absolute;
+			top:0;
+			left:0;
+			background:$yellow;
+			color:$black;
+			border:3px dotted $black;
+			outline:3px dotted $black;
+			padding:15px;
+			font-style:italic;
+			margin:0;
+			h4{
+				margin-bottom:1em;
+			}
+			p{
+				margin-bottom:0;
+				line-height:1;
+			}
+		}
+		.gfield_contains_required{
+			border:none;
+			input, select{
+				border:2px solid white;
+				outline:2px solid red;
+			}
+			.validation_message{
+				display:none;
+			}
+		}
+		@media #{$smltablet} {
+			.gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half){
+				max-width:100% !important;
+			}
+		}
+	}
+	@media #{$smldesktop} {
+		width:480px;
+		height:500px;
+		padding:120px 60px 0px 90px;
+		.gfield{
+			margin:0 0 8px 0;
+		}
+		input{
+			padding:10px 15px 10px 20px;
+		}
+		select{
+			padding:10px 0px 10px 14px;	
+		}
+	}
+}
+
+// BIRTHDAY CLUB
+
+#gform_wrapper_2{
+	.gform_heading{
+		text-align:center;
+	}
+	.gfield{
+		margin:0;
+		padding:0;
+	}
+	.gfield_label{
+		display:none;
+	}
+	.gfield_label_before_complex{
+		display:block;
+		padding-top:5px;
+	}
+	#field_2_2{
+		.ginput_container_date{
+			margin:0;
+			label{
+				display:none;
+			}
+		}
+		.clear-multi{
+			display:flex;
+			flex-flow:row nowrap;
+			justify-content:space-between;
+			> div{
+				width:calc(100%/3 - 5px);
+				max-width:calc(100%/3 - 5px);
+				input{
+					width:100% !important;
+				}
+			}
+		}
+	}
+	.gform_footer{
+		text-align:center;
+		padding:0;
+		margin:10px 0 0 0;
+	}
+}
+
+#gform_confirmation_wrapper_2{
+	@include container-padding(30px,30px,30px,30px);
+}

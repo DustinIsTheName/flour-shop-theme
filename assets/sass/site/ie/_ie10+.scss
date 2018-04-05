@@ -1,0 +1,59 @@
+/*
+
+IE FIXES
+
+*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+
+	// HEADER
+
+	#primary-menu{
+		li{
+			&#main-menu-social{
+				a{
+					flex:auto;
+				}
+			}
+		}
+	}
+
+	// FOOTER
+
+	.site-footer__social a{
+		width:45px;
+		height:45px;
+		img{
+			width:45px;
+			height:45px;
+		}
+	}
+
+	// CUSTOM ORDER FORM
+
+	#gform_wrapper_1{
+		.gfield{
+			&.price{
+				transform:translateX(6px) translateY(-5px);
+			}
+			&.cake-type{
+				transform:translateY(-5px);
+			}
+		}
+		@media #{$smldesktop} {
+			.gfield{
+				&.price{
+					transform:translateX(6px) translateY(-2px);
+				}
+				&.cake-type{
+					transform:translateY(-2px);
+				}
+			}
+			select{
+				padding:10px 0px 8px 14px;	
+			}
+		}
+	}
+
+
+}

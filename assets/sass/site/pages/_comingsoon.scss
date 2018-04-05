@@ -1,0 +1,22 @@
+/*
+
+CUSTOM ORDERS
+
+*/
+
+.comingsoon{
+	text-align:center;
+	@include container-padding(45px,0px,90px,0px);
+	@include container(l);
+	img{
+		width:150px;
+		margin:0 auto 2em auto;
+	}
+	p{
+		margin-top:3em;
+		font-style:italic;
+	}
+	address{
+		@include bold-upper;
+	}
+}
