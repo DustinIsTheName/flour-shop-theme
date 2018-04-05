@@ -557,7 +557,7 @@
 		"prP": 0
 		},
 	"\/assets\/sass\/_normalize.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -570,7 +570,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/elements\/_elements.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -583,7 +583,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/elements\/_lists.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -596,7 +596,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/elements\/_tables.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -609,7 +609,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/forms\/_buttons.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -622,7 +622,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/forms\/_fields.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -635,7 +635,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/forms\/_forms.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -648,7 +648,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/layout\/_content-sidebar.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -661,7 +661,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/layout\/_sidebar-content.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -684,7 +684,7 @@
 		"oS": 3
 		},
 	"\/assets\/sass\/main.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -697,7 +697,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/media\/_captions.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -710,7 +710,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/media\/_galleries.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -723,7 +723,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/media\/_media.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -736,7 +736,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/mixins\/_mixins-master.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -749,7 +749,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/modules\/_accessibility.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -762,7 +762,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/modules\/_alignments.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -775,7 +775,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/modules\/_clearings.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -788,7 +788,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/modules\/_infinite-scroll.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -801,7 +801,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/navigation\/_footer.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -814,7 +814,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/navigation\/_links.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -827,7 +827,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/navigation\/_menus.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -840,7 +840,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/navigation\/_navigation.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -853,7 +853,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/plugins\/_magnific.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -866,7 +866,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/plugins\/_outdated.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -879,7 +879,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/plugins\/_plugins.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -892,7 +892,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/plugins\/_slick.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -905,7 +905,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_cart.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -918,7 +918,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_checkout.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -931,7 +931,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_components.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -944,7 +944,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_products.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -957,7 +957,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_single-product.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -970,7 +970,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_tables.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -983,7 +983,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/shop\/_widgets.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -996,7 +996,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/_site.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1009,7 +1009,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/ie\/_ie10+.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1022,7 +1022,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_about.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1035,7 +1035,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_comingsoon.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1048,7 +1048,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_customorders.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1061,7 +1061,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_error404.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1074,7 +1074,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_faq.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1087,7 +1087,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_gallery.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1100,7 +1100,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_home.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1113,7 +1113,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_location.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1126,7 +1126,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/pages\/_press.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1139,7 +1139,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/primary\/_comments.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1152,7 +1152,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/primary\/_global-styles.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1165,7 +1165,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/primary\/_posts-and-pages.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1178,7 +1178,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/site\/secondary\/_widgets.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1191,7 +1191,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/typography\/_copy.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1204,7 +1204,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/typography\/_headings.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1217,7 +1217,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/typography\/_typography.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1230,7 +1230,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/typography\/_webfonts.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1243,7 +1243,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/variables-site\/_colors.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1256,7 +1256,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/variables-site\/_columns.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1269,7 +1269,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/variables-site\/_structure.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1282,7 +1282,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/variables-site\/_typography.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1295,7 +1295,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/variables-site\/_variables-site.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -1308,7 +1308,7 @@
 		"uL": 1
 		},
 	"\/assets\/sass\/woocommerce.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"dS": 0,
@@ -3641,7 +3641,7 @@
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
