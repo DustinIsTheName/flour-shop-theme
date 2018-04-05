@@ -30,10 +30,14 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
-// RAINBOW STRIPE
+// RAINBOW STRIPE 
+.baron {
+	display:none;
+}
 
 .rainbow-stripe{
 	display:none;
+	
 	@media #{$smldesktop} {
 		display:block;
 		width:129px;
@@ -43,6 +47,22 @@ figure {
 		right:2.5%;
 		background:url(rainbow-stripe.svg) repeat-y;
 		z-index:20;
+	}
+}
+
+.template-product {
+	.rainbow-stripe{
+		display: none;
+		@media only screen and (min-width: 1400px) {
+			display:block;
+			width:129px;
+			height:100%;
+			position:absolute;
+			top:0;
+			right:2.5%;
+			background:url(rainbow-stripe.svg) repeat-y;
+			z-index:20;
+		}
 	}
 }
 

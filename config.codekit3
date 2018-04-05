@@ -673,6 +673,16 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/sass\/main.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/sass\/main-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/assets\/sass\/main.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -681,8 +691,8 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/assets\/sass\/main.css",
-		"oF": 0,
+		"oAP": "\/assets\/style.scss.liquid",
+		"oF": 2,
 		"oS": 0,
 		"uL": 1
 		},
@@ -1415,19 +1425,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"\/assets\/style.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/style.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"\/assets\/style.scss.liquid": {
 		"cB": 0,
