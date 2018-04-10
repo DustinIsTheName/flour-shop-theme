@@ -357,9 +357,7 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
 // SWATCH 
 .bold_option_swatch {
 	border-width: 0px;
-	.bold_option_title {
-		font-size: 1em;
-	}
+
 	.bold_option_value_element {
 	    box-shadow: 0 0 0 0;
 	    border: 2px white solid;
@@ -378,6 +376,9 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
 .bold_option.bold_option_textbox, .bold_option.bold_option_swatch {
 	padding-left: 10px;
 	border-left: 6px solid #1CA0D8;
+	.bold_option_title {
+		font-size: 1em;
+	}
 }
 .bold_option.bold_option_textbox.bold_option_hidden, .bold_option.bold_option_swatch.bold_option_hidden {
 	padding: 0;
