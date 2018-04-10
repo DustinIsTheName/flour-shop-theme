@@ -357,6 +357,9 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
 // SWATCH 
 .bold_option_swatch {
 	border-width: 0px;
+	.bold_option_title {
+		font-size: 1em;
+	}
 	.bold_option_value_element {
 	    box-shadow: 0 0 0 0;
 	    border: 2px white solid;
