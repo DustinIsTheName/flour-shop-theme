@@ -7,7 +7,7 @@
 		"uuidString": "C793F676-E56A-45B2-A7EB-DD7AFC3C112E"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/assets\/animation.gsap.min.js": {
 		"ft": 64,
@@ -672,6 +672,16 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"\/assets\/sass\/main-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/assets\/sass\/main-min-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/assets\/sass\/main.css": {
 		"aP": 1,
@@ -1443,6 +1453,7 @@
 	"\/assets\/temp-menu.jpg": {
 		"ft": 16384,
 		"iS": 154834,
+		"jF": 0,
 		"oA": 0,
 		"oAP": "\/assets\/temp-menu.jpg",
 		"oF": 0,
@@ -1725,7 +1736,8 @@
 	"creationDate": 543515455,
 	"displayValue": "flour-shop-shopify-production",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-grumpy"
+	"iconImageName": "meme-grumpy",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3528,6 +3540,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {

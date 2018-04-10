@@ -353,6 +353,7 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
 .bold_option_element input[type=radio] {
 	margin-right: 3px;
 }
+
 // SWATCH 
 .bold_option_swatch {
 	border-width: 0px;
@@ -368,6 +369,16 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
 	border-width: 0;
 	width: 22px;
 	height: 22px;
+}
+
+// CONDITIONAL STYLING
+.bold_option.bold_option_textbox, .bold_option.bold_option_swatch {
+	padding-left: 10px;
+	border-left: 6px solid #1CA0D8;
+}
+.bold_option.bold_option_textbox.bold_option_hidden, .bold_option.bold_option_swatch.bold_option_hidden {
+	padding: 0;
+	border-width: 0;
 }
 /*.bold_option_swatch_title {
 	display:none;

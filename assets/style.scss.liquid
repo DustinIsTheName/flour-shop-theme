@@ -1273,12 +1273,12 @@ input[type="submit"] {
   text-decoration: none;
   border-radius: 0px; }
   .btn:hover, .btn--large:hover, button:hover,
-  input[type="button"]:hover,
-  input[type="reset"]:hover,
-  input[type="submit"]:hover, .btn:visited, .btn--large:visited, button:visited,
-  input[type="button"]:visited,
-  input[type="reset"]:visited,
-  input[type="submit"]:visited {
+  input:hover[type="button"],
+  input:hover[type="reset"],
+  input:hover[type="submit"], .btn:visited, .btn--large:visited, button:visited,
+  input:visited[type="button"],
+  input:visited[type="reset"],
+  input:visited[type="submit"] {
     color: white; }
 
 .btn--large {
@@ -4334,6 +4334,14 @@ a.reset_variations, a.reset_variations:visited, .woocommerce-message a, .woocomm
   border-width: 0;
   width: 22px;
   height: 22px; }
+
+.bold_option.bold_option_textbox, .bold_option.bold_option_swatch {
+  padding-left: 10px;
+  border-left: 6px solid #1CA0D8; }
+
+.bold_option.bold_option_textbox.bold_option_hidden, .bold_option.bold_option_swatch.bold_option_hidden {
+  padding: 0;
+  border-width: 0; }
 
 /*.bold_option_swatch_title {
 	display:none;
