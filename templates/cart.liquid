@@ -122,15 +122,17 @@
     function checkForStorePickup() {
       if ($('#storePickupApp').children().length > 0) {
         console.log('storePickupApp loaded');
-        var previousValue = $('[name="datetime"].pickadate').val();
+        var $pickupDateInput = $('[name="attributes[Pickup-Date]"].pickadate');
+
+        var previousValue = $pickupDateInput.val();
 
         setInterval(function() { 
-          if ($('[name="datetime"].pickadate').val() !== previousValue) {
-            previousValue = $('[name="datetime"].pickadate').val();
+          if ($pickupDateInput.val() !== previousValue) {
+            previousValue = $pickupDateInput.val();
 
             $.ajax({
               type: 'GET',
-              data: {date: $('[name="datetime"].pickadate').val()},
+              data: {date: $pickupDateInput.val()},
               dataType: 'json',
               url: 'https://85ecf3b8.ngrok.io/get-info'
             }).done(function(response) {
