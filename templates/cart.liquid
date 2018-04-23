@@ -115,6 +115,21 @@
 
 </form>
 </div><!-- END CART -->
+
+<script type="text/javascript">
+    console.log('on cart');
+
+    function checkForStorePickup() {
+      if ($('#storePickupApp').children().length > 0) {
+        console.log('storePickupApp loaded');
+      } else {
+        setTimeout(checkForStorePickup, 100);
+      }
+    }
+
+    checkForStorePickup();
+</script>
+
 {% else %}
 
 <article id="post-5" class="post-5 page type-page status-publish hentry">
