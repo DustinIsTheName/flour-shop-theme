@@ -71,7 +71,5 @@ jQuery(function($) {
     e.preventDefault();
     switchImage($(this).attr('href'), null, $('.product-photo-container img')[0]);
   } );
-
-  console.log('testing - running executable');
   
 });
