@@ -137,7 +137,7 @@
       "saturday": {{ settings.saturday_order_limit | plus: 0 }}
     };
 
-    weekday_exceptions = "{{ settings.order_limit_exceptions | split: ';' }}";
+    weekday_exceptions = "{{ settings.order_limit_exceptions }}";
 
     weekdays = [
       "sunday",
