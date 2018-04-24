@@ -101,7 +101,13 @@
     
     <!-- Zapiet | Store Pickup + Delivery -->
     <div class="zapiet-container"><div id="storePickupApp"></div></div>
-<!-- Zapiet | Store Pickup + Delivery --><input type="submit" name="checkout" value="Check out" />    
+    <!-- Zapiet | Store Pickup + Delivery -->
+
+    <div id="warning-message">
+      <p>The selected date of <span class="date"></span> currently has <span class="orders"></span> orders queued for it.</p>
+    </div>
+
+    <input type="submit" name="checkout" value="Check out" />    
     {% comment %}Paypal and Google checkout buttons{% endcomment %}
     {% if additional_checkout_buttons %}
     <p class="additional-checkout-buttons">
@@ -119,7 +125,7 @@
 <script type="text/javascript">
     console.log('on cart');
 
-    weekday_settings = [
+    weekday_settings = {
       "sunday": {{ settings.sunday_order_limit | plus: 0 }},
       "monday": {{ settings.monday_order_limit | plus: 0 }},
       "tuesday": {{ settings.tuesday_order_limit | plus: 0 }},
@@ -127,7 +133,7 @@
       "thursday": {{ settings.thursday_order_limit | plus: 0 }},
       "friday": {{ settings.friday_order_limit | plus: 0 }},
       "saturday": {{ settings.saturday_order_limit | plus: 0 }}
-    ];
+    };
 
     weekdays = [
       "sunday",
@@ -157,11 +163,15 @@
               url: 'https://85ecf3b8.ngrok.io/get-info'
             }).done(function(selected_date_data) {
               console.log(selected_date_data.orders_for_the_day);
-              var selectedDate = new Date(previousDateValue).getDay();
+              var selectedDate = new Date(previousDateValue);
               var weekday = weekdays[selectedDate.getDay()];
 
               if (selected_date_data.orders_for_the_day >= weekday_settings[weekday]) {
-                console.log('data here');
+                $('#warning-message .date').text(previousDateValue);
+                $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
+                $('#warning-message').show();
+              } else {
+                $('#warning-message').hide();
               }
             });
           }
