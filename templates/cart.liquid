@@ -122,8 +122,6 @@
 </form>
 </div><!-- END CART -->
 
-{{ settings.order_limit_exceptions | split: ';' }}
-
 <script type="text/javascript">
     console.log('on cart');
 
@@ -137,7 +135,11 @@
       "saturday": {{ settings.saturday_order_limit | plus: 0 }}
     };
 
-    weekday_exceptions = "{{ settings.order_limit_exceptions }}";
+    weekday_exceptions = weekday_exceptions.split(';').map(function(exception) {
+      return exception.split(':').map(function(e) {
+        return e.trim()
+      });
+    });
 
     weekdays = [
       "sunday",
@@ -171,7 +173,11 @@
               var weekday = weekdays[selectedDate.getDay()];
               var fulfillmentLimit = weekday_settings[weekday];
 
-
+              weekday_exceptions.forEach(function(e) {
+                if (e[0] == previousDateValue) {
+                  fulfillmentLimit = e[1];
+                }
+              });
 
               if (selected_date_data.orders_for_the_day >= weekday_settings[weekday]) {
                 $('#warning-message .date').text(previousDateValue);
