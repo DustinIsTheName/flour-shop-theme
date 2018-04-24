@@ -169,7 +169,6 @@
               dataType: 'json',
               url: 'https://b34cf2ca.ngrok.io/get-info'
             }).done(function(selected_date_data) {
-              console.log(selected_date_data.orders_for_the_day);
               var selectedDate = new Date(previousDateValue);
               var weekday = weekdays[selectedDate.getDay()];
               var fulfillmentLimit = weekday_settings[weekday];
@@ -180,7 +179,9 @@
                 }
               });
 
-              if (selected_date_data.orders_for_the_day >= weekday_settings[weekday]) {
+              console.log(fulfillmentLimit);
+
+              if (selected_date_data.orders_for_the_day >= fulfillmentLimit) {
                 $('#warning-message .date').text(previousDateValue);
                 $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
                 $('#warning-message .fulfillment').text(weekday_settings[weekday]);
