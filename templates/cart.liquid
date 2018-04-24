@@ -104,7 +104,7 @@
     <!-- Zapiet | Store Pickup + Delivery -->
 
     <div id="warning-message" style="display: none;-">
-      <p>The selected date of <span class="date"></span> currently has <span class="orders"></span> orders queued for it out of an expected fulfillment of <span class="fulfillment"></span> orders. Please note that there is no garentee your order will be fulfilled on this date.</p>
+      <p>The selected date of <span class="date"></span> currently has <span class="orders"></span> orders queued out of an expected fulfillment of <span class="fulfillment"></span> orders. Please note that there is no garentee your order will be fulfilled on this date.</p>
     </div>
 
     <input type="submit" name="checkout" value="Check out" />    
@@ -122,6 +122,8 @@
 </form>
 </div><!-- END CART -->
 
+{{ settings.order_limit_exceptions | split: ';' }}
+
 <script type="text/javascript">
     console.log('on cart');
 
@@ -134,6 +136,8 @@
       "friday": {{ settings.friday_order_limit | plus: 0 }},
       "saturday": {{ settings.saturday_order_limit | plus: 0 }}
     };
+
+    weekday_exceptions = "{{ settings.order_limit_exceptions | split: ';' }}";
 
     weekdays = [
       "sunday",
@@ -165,6 +169,9 @@
               console.log(selected_date_data.orders_for_the_day);
               var selectedDate = new Date(previousDateValue);
               var weekday = weekdays[selectedDate.getDay()];
+              var fulfillmentLimit = weekday_settings[weekday];
+
+
 
               if (selected_date_data.orders_for_the_day >= weekday_settings[weekday]) {
                 $('#warning-message .date').text(previousDateValue);
