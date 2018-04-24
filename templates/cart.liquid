@@ -184,7 +184,7 @@
               if (selected_date_data.orders_for_the_day >= fulfillmentLimit) {
                 $('#warning-message .date').text(previousDateValue);
                 $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
-                $('#warning-message .fulfillment').text(weekday_settings[weekday]);
+                $('#warning-message .fulfillment').text(fulfillmentLimit);
                 $('#warning-message').show();
               } else {
                 $('#warning-message').hide();
