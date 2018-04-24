@@ -103,11 +103,13 @@
     <div class="zapiet-container"><div id="storePickupApp"></div></div>
     <!-- Zapiet | Store Pickup + Delivery -->
 
-    <div id="warning-message" style="display: none;-">
-      <h2>You chose a great date but...</h2>
-      <p>we have already met our production capacity for <span class="date"></span>. We can't guarantee that your order will be ready for pickup on <span class="date"></span> but we'll do everything we can to make it happen</p>
-      <p>Please proceed to checkout or choose another date.</p>
-      {% comment %}<p>The selected date of  already has <span class="orders"></span> orders queued out of an expected fulfillment of <span class="fulfillment"></span> orders. Please note that there is no guarantee your order will be fulfilled on this date.</p>{% endcomment %}
+    <div id="warning-message" style="display: none;">
+      <div class="warning-message-inner" style="display: none;">
+        <h2>You chose a great date but...</h2>
+        <p>we have already met our production capacity for <span class="date"></span>. We can't guarantee that your order will be ready for pickup on <span class="date"></span> but we'll do everything we can to make it happen</p>
+        <p>Please proceed to checkout or choose another date.</p>
+        {% comment %}<p>The selected date of  already has <span class="orders"></span> orders queued out of an expected fulfillment of <span class="fulfillment"></span> orders. Please note that there is no guarantee your order will be fulfilled on this date.</p>{% endcomment %}
+      </div>
     </div>
 
     <input type="submit" name="checkout" value="Check out" />    
