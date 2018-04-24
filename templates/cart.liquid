@@ -103,8 +103,8 @@
     <div class="zapiet-container"><div id="storePickupApp"></div></div>
     <!-- Zapiet | Store Pickup + Delivery -->
 
-    <div id="warning-message">
-      <p>The selected date of <span class="date"></span> currently has <span class="orders"></span> orders queued for it.</p>
+    <div id="warning-message" style="display: none;-">
+      <p>The selected date of <span class="date"></span> currently has <span class="orders"></span> orders queued for it out of an expected fulfillment of <span class="fulfillment"></span> orders. Please note that there is no garentee your order will be fulfilled on this date.</p>
     </div>
 
     <input type="submit" name="checkout" value="Check out" />    
@@ -169,6 +169,7 @@
               if (selected_date_data.orders_for_the_day >= weekday_settings[weekday]) {
                 $('#warning-message .date').text(previousDateValue);
                 $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
+                $('#warning-message .fulfillment').text(weekday_settings[weekday]);
                 $('#warning-message').show();
               } else {
                 $('#warning-message').hide();
