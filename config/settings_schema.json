@@ -357,47 +357,48 @@
     "settings": [
       {
         "type": "header",
-        "content": "Daily Limits"
+        "content": "Daily Order Limits"
       },
       {
         "type": "text",
         "id": "sunday_order_limit",
-        "label": "Limit of Orders for Sunday"
+        "label": "Order limit for Sunday"
       },
       {
         "type": "text",
         "id": "monday_order_limit",
-        "label": "Limit of Orders for Monday"
+        "label": "Order limit for Monday"
       },
       {
         "type": "text",
         "id": "tuesday_order_limit",
-        "label": "Limit of Orders for Tuesday"
+        "label": "Order limit for Tuesday"
       },
       {
         "type": "text",
         "id": "wednesday_order_limit",
-        "label": "Limit of Orders for Wednesday"
+        "label": "Order limit for Wednesday"
       },
       {
         "type": "text",
         "id": "thursday_order_limit",
-        "label": "Limit of Orders for Thursday"
+        "label": "Order limit for Thursday"
       },
       {
         "type": "text",
         "id": "friday_order_limit",
-        "label": "Limit of Orders for Friday"
+        "label": "Order limit for Friday"
       },
       {
         "type": "text",
         "id": "saturday_order_limit",
-        "label": "Limit of Orders for Saturday"
+        "label": "Order limit for Saturday"
       },
       {
         "type": "textarea",
         "id": "order_limit_exceptions",
-        "label": "Exceptions for Order Limits"
+        "label": "Exceptions for Order Limits",
+        "info": "Format shoud be <date(YYYY/MM/DD)>:<order limit>; (ex: 1999/12/31: 24; 2000/01/21: 10)"
       }
     ]
   }
