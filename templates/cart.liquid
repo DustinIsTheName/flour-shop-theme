@@ -191,8 +191,11 @@
                 $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
                 $('#warning-message .fulfillment').text(fulfillmentLimit);
                 $('#warning-message').show();
+
+                $('#warning-message').append('<input type="hidden" name="attributes[over-capacity]" value="true" style="display: none;">');
               } else {
                 $('#warning-message').hide();
+                $('[name="attributes[over-capacity]"]').remove();
               }
             });
           }
