@@ -172,7 +172,7 @@
               type: 'GET',
               data: {date: $pickupDateInput.val()},
               dataType: 'json',
-              url: 'https://3fc590e8.ngrok.io/get-info'
+              url: 'https://flour-shop-cart-warning.herokuapp.com/get-info'
             }).done(function(selected_date_data) {
               var selectedDate = new Date(previousDateValue);
               var weekday = weekdays[selectedDate.getDay()];
