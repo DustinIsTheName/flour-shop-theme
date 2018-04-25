@@ -4804,17 +4804,25 @@ p.no-comments {
 
 #warning-message {
   text-align: right;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 
-  p {
+  .warning-message-inner {
     width: 100%;
     max-width: 450px;
     display: inline-block;
-    margin: 0;
-    background: #D9252F;
-    color: #fff;
-    padding: 19px;
-    text-align: center;
+    padding: 10px;
+    border: 2px solid #EFDD34;
+
+    h2 {
+      text-align: center;
+      background: #EFDD34;
+      margin: -10px -10px 10px;
+      padding: 10px;
+    }
+
+    p {
+      text-align: center;
+    }
   }
 }
 
