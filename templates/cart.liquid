@@ -187,6 +187,7 @@
 
               console.log(fulfillmentLimit);
 
+              $('[name="attributes[over-capacity]"]').remove();
               if (selected_date_data.orders_for_the_day >= fulfillmentLimit) {
                 $('#warning-message .date').text(selectedDate.toLocaleDateString());
                 $('#warning-message .orders').text(selected_date_data.orders_for_the_day);
@@ -196,7 +197,6 @@
                 $('#warning-message').append('<input type="hidden" name="attributes[over-capacity]" value="true" style="display: none;">');
               } else {
                 $('#warning-message').hide();
-                $('[name="attributes[over-capacity]"]').remove();
               }
             });
           }
